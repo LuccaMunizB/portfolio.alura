@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@600&display=swap');
+*{
+    margin: 0;/* para tirar os espacamentos*/
+    padding: 0;
+}
+
+:root{/*criar variaveis globais*/
+--cor-primaria : #000000;
+--cor-secundaria: #f6f6f6;
+--cor-terciaria: #22d4fd;
+--cor-hover: #272727;
+/*para criar variaveis --nome: valor*/
+--fonte-primaria: 'Krona One', sans-serif;
+--fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+.header{
+    padding-top: 73px;
+    padding-left: 15%;
+}
+
+.header__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header__menu__link{
+font-family: var(--fonte-secundaria);
+font-size: 1.5rem;
+font-weight: 600;
+color: var(--cor-terciaria);
+text-decoration: none;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+strong{
+    color: var(--cor-terciaria);
+}
+.apresentacao{
+    padding: 5% 15%;
+    display: flex;/*mostra o sentido que os itens sao mostrados, padrao: linear*/
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+.texto{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.titulo{
+    font-family: var(--fonte-primaria);
+    /*font-size: 36px;// 1 rem = 16 pixels*/
+    font-size:2.25rem;
+}
+.paragrafo{
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;/* separa os itens em 32 px*/
+}
+.subtitulo{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.links__link{
+    color: var(--cor-secundaria);
+    border: 2px solid  var(--cor-terciaria);
+    font-family: var(--fonte-secundaria);
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    gap: 16px;
+    width: 50%;
+    text-align: center;/*alinha txt no centro do botao*/
+    border-radius: 8px;/*deixa o botao arredondado*/
+    padding: 21.5px 0;/*add uma margen verticalmente e 0 de margem horizontal*/
+    font-size: 1.5rem;
+    text-decoration: none;/*tira o sublinhado de baixo de link*/
+}
+
+.links__link:hover{
+    background-color: var(--cor-hover);
+}
+
+.imagem__mulher{
+    width: 50%;
+}
+
+.footer{
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 550;
+    padding: 24px;
+    text-align: center;
+}
+
+@media (max-width: 1400px){
+
+    .header{
+        padding: 10%;
+    }
+
+    .header__menu{
+        justify-content: center;
+    }
+
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .texto{
+        width: auto;
+    }
+
+}
